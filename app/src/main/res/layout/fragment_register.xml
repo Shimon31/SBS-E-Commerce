@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0C9A8D"
+    android:gravity="center"
+    tools:context=".UI.register.RegisterFragment">
+
+    <EditText
+        android:id="@+id/userNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Username"
+        android:textAlignment="center"
+        android:background="@drawable/et_bg"
+        android:padding="12dp"
+        android:inputType="textEmailAddress"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:textAlignment="center"
+        android:background="@drawable/et_bg"
+        android:padding="12dp"
+        android:inputType="textEmailAddress"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/et_bg"
+        android:hint="Enter Password"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textAlignment="center" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textStyle="bold"
+        android:backgroundTint="#FFC107"
+        android:background="@drawable/et_bg"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="50dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textStyle="bold"
+        android:backgroundTint="#FFC107"
+        android:background="@drawable/et_bg"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
