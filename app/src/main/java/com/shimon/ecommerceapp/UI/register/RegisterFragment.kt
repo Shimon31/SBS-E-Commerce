@@ -20,8 +20,11 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
 
 
         viewModel.registerResponse.observe(viewLifecycleOwner){
+            if(it.isSuccessful){
+                findNavController().navigate(R.id.action_registerFragment_to_loignFragment)
+            }
 
-            findNavController().navigate(R.id.action_registerFragment_to_loignFragment)
+
 
         }
 
@@ -33,7 +36,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                 val email = emailET.text.toString()
                 val password = passwordET.toString()
                 val imageAvatar =
-                    "https://media.licdn.com/dms/image/v2/D5603AQErtE23hVt_9g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725974334692?e=2147483647&v=beta&t=wf3tC9QCVFXiThXP3zq9UQhQ4ColGEq05-wgnqbF0fg"
+                      "https://media.licdn.com/dms/image/v2/D5603AQErtE23hVt_9g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725974334692?e=2147483647&v=beta&t=wf3tC9QCVFXiThXP3zq9UQhQ4ColGEq05-wgnqbF0fg"
 
                 val requestRegister = RequestRegister(
                     avatar = imageAvatar,
@@ -44,8 +47,6 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
 
                 viewModel.register(requestRegister)
             }
-
-
 
         }
 
